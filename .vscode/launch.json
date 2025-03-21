@@ -6,12 +6,29 @@
     "configurations": [
 
         {
+            "name": "make doglips2",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "makemore.py",
+            "console": "integratedTerminal",
+            "args": "-i data/doglips.csv --jack --device mps"
+        },
+
+        {
             "name": "makemore",
             "type": "debugpy",
             "request": "launch",
             "program": "makemore.py",
             "console": "integratedTerminal",
-            "args": "-i data/doglips.csv --device mps -b 256 "
+            "args": "-i data/doglips.csv --device mps "
+        },
+        {
+            "name": "resume makemore",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "makemore.py",
+            "console": "integratedTerminal",
+            "args": "--resume "
         }
     ]
 }
